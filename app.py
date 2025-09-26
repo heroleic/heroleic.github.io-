@@ -15,6 +15,16 @@ users = {
 def index():
     return render_template('index.html')
 
+# 登录页面路由
+@app.route('/login')
+def login_page():
+    return render_template('login.html')
+
+# 注册页面路由
+@app.route('/register')
+def register_page():
+    return render_template('register.html')
+
 # 登录接口
 @app.route('/api/login', methods=['POST'])
 def login():
